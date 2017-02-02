@@ -57,6 +57,11 @@ else (WITH_SHARED_LIBUV)
   set(LIBUV_LIBRARIES uv)
 endif (WITH_SHARED_LIBUV)
 
+# Ugly warnings
+IF(MSVC)
+  ADD_DEFINITIONS(-D_CRT_SECURE_NO_WARNINGS)
+ENDIF()
+
 if (LUA)
   MESSAGE(STATUS "Lua: using information from luarocks")
 

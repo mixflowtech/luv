@@ -91,6 +91,7 @@ if(WIN32)
     ${LIBUVDIR}/src/win/winapi.h
     ${LIBUVDIR}/src/win/winsock.c
     ${LIBUVDIR}/src/win/winsock.h
+    ${LIBUVDIR}/src/win/detect-wakeup.c
   )
 else()
   include_directories(${LIBUVDIR}/src/unix)
